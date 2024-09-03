@@ -184,7 +184,7 @@ jobs:
 
       - name: Download test reports artifact
         id: download-test-reports
-        uses: actions/download-artifact@v3
+        uses: actions/download-artifact@v4.1.7
         continue-on-error: true
         if: ${{ inputs.uploadTestTrace == 'yes' && (inputs.skipForDocsOnly != 'yes' || steps.docs-change.outputs.DOCS_CHANGE == 'nope') }}
         with:
